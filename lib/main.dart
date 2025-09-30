@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
           case '/':
             return MaterialPageRoute(builder: (context) => OnboardingScreen());
           case '/home':
-            return MaterialPageRoute(builder: (context) => const HomeScreen());
+            return MaterialPageRoute(builder: (context) =>  HomeScreen());
           case '/venue-detail':
             final venue = settings.arguments as VenueModel;
             return MaterialPageRoute(

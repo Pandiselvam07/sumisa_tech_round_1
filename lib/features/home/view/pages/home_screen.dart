@@ -195,7 +195,11 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       bottomNavigationBar: CustomBottomNavBar(
         currentIndex: _viewModel.currentNavIndex,
-        onTap: _viewModel.setNavIndex,
+        onTap: (index) {
+          setState(() {
+            _viewModel.setNavIndex(index);
+          });
+        },
       ),
     );
   }
