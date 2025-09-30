@@ -105,23 +105,18 @@ class _VenueDetailScreenState extends State<VenueDetailScreen> {
                           height: 1.6,
                         ),
                       ),
-                      const SizedBox(height: 100),
+                      const SizedBox(height: 20),
                     ],
                   ),
                 ),
               ],
             ),
           ),
-          Positioned(
-            left: 0,
-            right: 0,
-            bottom: 0,
-            child: BookButton(
-              time: widget.venue.bookingTime,
-              onPressed: _viewModel.onBookNow,
-            ),
-          ),
         ],
+      ),
+      bottomNavigationBar: BookButton(
+        time: widget.venue.bookingTime,
+        onPressed: _viewModel.onBookNow,
       ),
     );
   }
